@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Enemy/kbolt.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 32.0
+
+[node name="Enemy" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+use_parent_material = true
+position = Vector2( 32, 32 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="kbolt" type="Sprite" parent="."]
+position = Vector2( 32, 32 )
+scale = Vector2( 0.121226, 0.11985 )
+texture = ExtResource( 1 )
