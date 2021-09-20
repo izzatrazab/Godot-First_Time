@@ -1,4 +1,4 @@
-extends 
+extends Actor
 
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted:= Input.is_action_just_released("jump") and _velocity.y < 0.0
