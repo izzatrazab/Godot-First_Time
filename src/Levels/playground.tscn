@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Levels/brick.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -29,6 +29,22 @@ points = PoolVector2Array( 0, 0, 110, 0, 110, 80, 0, 80 )
 } ]
 0/z_index = 0
 
+[sub_resource type="TileSet" id=3]
+0/name = "brick.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 10, 80, 45, 70 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [node name="LevelTemplate" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -42,3 +58,8 @@ tile_data = PoolIntArray( 131095, 0, 0, 196623, 0, 0, 196631, 0, 0, 327678, 0, 0
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 98, 369 )
 speed = Vector2( 700, 1000 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+format = 1
+tile_data = PoolIntArray( 851969, 0, 0, 851971, 0, 0, 851973, 0, 0, 851975, 0, 0, 851977, 0, 0, 983045, 0, 0, 983058, 0, 0 )
